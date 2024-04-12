@@ -23,7 +23,7 @@ def print_encoded_pw(password):
 def decode(password):
     decoded_password = ""
     for char in password:
-        new_char = char -3 
+        new_char = (char - 3) % 10 
         decoded_password += str(new_char)
         print decoded_password
 
