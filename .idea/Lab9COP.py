@@ -20,6 +20,12 @@ def print_encoded_pw(password):
         # return password
     return encoded_password
 
+def decode(password):
+    decoded_password = ""
+    for char in password:
+        new_char = char -3 
+        decoded_password += str(new_char)
+        print decoded_password
 
 if __name__ == '__main__':
     while True:
@@ -33,7 +39,7 @@ if __name__ == '__main__':
             password = int(input('Please enter your password to encode:'))
             print(encode(password))
         if option == '2':
-            print(f'The encoded password is {print_encoded_pw(password)}, and the origional password is ')
+            print(f'The encoded password is {print_encoded_pw(password)}, and the original password is {decode(password)}. ')
         if option == '3':
             break
 
